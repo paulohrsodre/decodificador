@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --fonte-principal: "Inter", sans-serif;
+    --cor-principal: #0A3871;
+    --cor-secundaria: #F3F5FC;
+    --cor-terciaria: #495057;
+    --cor-quaternaria: #FFF;
+    --preto: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+    font-family: var(--fonte-principal);
+    font-size: 1em;
+    background-color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding-bottom: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: calc(100vh - 40px);
+    padding-bottom: 40px;
+}
+
+.container-entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: calc(100vh - 40px);
+    padding-bottom: 40px;
+    justify-content: flex-start;
+}
+
+.container-entrada__texto {
+    width: 100%;
+    height: 30vh;
+    border: 1px solid;
+    font-family: var(--fonte-principal);
+}
+
+.container-entrada__texto::placeholder {
+    font-family: var(--fonte-principal);
+    font-size: 2em;
+    padding: 1em;
+    color: var(--cor-principal);
+}
+
+.container-entrada__alerta {
+    font-size: 0.75em;
+    display: flex;
+    gap: 8px;
+    margin: 1em;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.container-botao__criptografar,
+.container-botao__descriptografar {
+    font-size: 1em;
+    padding: 1.5em;
+    border: 1px solid;
+    border-radius: 1.5em;
+}
+
+.container-botao__criptografar {
+    color: var(--cor-quaternaria);
+    background-color: var(--cor-principal);
+}
+
+.container-botao__descriptografar {
+    color: var(--cor-principal);
+    background-color: var(--cor-quaternaria);
+}
+
+.container__resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    
+}
+
+.container-resultado__saida {
+    border-radius: 32px;
+    background: var(--cor-quaternaria);
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
+}
+
+.rodape {
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--cor-principal);
+    text-align: center;
+    height: 40px;
+}
