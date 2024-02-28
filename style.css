@@ -104,13 +104,6 @@
     background-color: var(--cor-quaternaria);
 }
 
-.container__resultado {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px; 
-}
-
 .container-resultado__saida__vazio {
     width: 100%;
     padding: 2em;
@@ -125,7 +118,6 @@
 .container-resultado__saida__vazio img {
     display: none;
 }
-
 
 .container-resultado__saida__criptografado {
     width: 100%;
