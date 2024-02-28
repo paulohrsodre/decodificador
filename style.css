@@ -169,6 +169,10 @@
         width: 90%;
     }
 
+    .container__resultado {
+        min-width: 25vw;
+    }
+
     .container-entrada__texto {
         height: 77vh;
         padding-top: 8em;
@@ -179,10 +183,20 @@
     }
 
     .container-resultado__saida__vazio {
-        height: 88vh;
+        height: 91vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .container-resultado__saida {
+        display: none;
+        height: 100%;
+        border: none;
+        color: var(--cor-principal);
+        font-size: 2em;
+        font-weight: 400;
+        font-family: var(--fonte-principal);
     }
 
     .container-resultado__saida__vazio img {
