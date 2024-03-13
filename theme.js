@@ -21,6 +21,8 @@ const lightMode = {
   '--cor-quaternaria': '#FFF', // White (light mode)
   '--cor-quintenaria': '#D8DFE8',
   '--preto': '#000', // Black (light mode)
+  '--hover-azul': '#105ab5',
+  '--hover-cinza': '#F3F5FC',
 };
 
 const darkMode = {
@@ -30,6 +32,8 @@ const darkMode = {
   '--cor-quaternaria': '#183C57', // Black (dark mode)
   '--cor-quintenaria': '#183C57',
   '--preto': '#E0EAF5', // White (dark mode)
+  '--hover-azul': '#ffb97d',
+  '--hover-cinza': '#2E77AE',
 };
 
 checkbox.addEventListener('change', () => {
