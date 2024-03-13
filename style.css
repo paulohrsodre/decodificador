@@ -8,6 +8,8 @@
     --cor-quaternaria: #FFF;
     --cor-quintenaria: #D8DFE8;
     --preto: #000;
+    --hover-azul: #105ab5;
+    --hover-cinza: #F3F5FC;
 }
 
 * {
@@ -174,6 +176,7 @@
     border: 1px solid;
     border-radius: 1.5em;
     width: 100%;
+    cursor: pointer;
 }
 
 .container-botao__criptografar {
@@ -181,9 +184,25 @@
     background-color: var(--cor-principal);
 }
 
+.container-botao__criptografar:hover {
+    background-color: var(--hover-azul);
+}
+
+.container-botao__criptografar:active {
+    transform: scale(0.95);
+}
+
 .container-botao__descriptografar {
     color: var(--cor-principal);
     background-color: var(--cor-quintenaria);
+}
+
+.container-botao__descriptografar:hover {
+    background-color: var(--hover-cinza);
+}
+
+.container-botao__descriptografar:active {
+    transform: scale(0.95);
 }
 
 .container-resultado__saida__vazio {
@@ -228,6 +247,15 @@
     display: none;
     margin-top: 2em;
     width: 100%;
+    cursor: pointer;
+}
+
+.container-botao__copiar:hover {
+    background-color: var(--hover-cinza);
+}
+
+.container-botao__copiar:active {
+    transform: scale(0.95);
 }
 
 .rodape {
