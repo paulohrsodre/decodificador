@@ -19,20 +19,17 @@ const lightMode = {
   '--cor-secundaria': '#F3F5FC', // Background color (light mode)
   '--cor-terciaria': '#495057', // Text color (light mode)
   '--cor-quaternaria': '#FFF', // White (light mode)
+  '--cor-quintenaria': '#D8DFE8',
   '--preto': '#000', // Black (light mode)
 };
 
 const darkMode = {
-//   '--cor-principal': '#FFF', // Main color (dark mode)
-//   '--cor-secundaria': '#495057', // Background color (dark mode)
-//   '--cor-terciaria': '#F3F5FC', // Text color (dark mode)
-//   '--cor-quaternaria': '#000', // Black (dark mode)
-//   '--preto': '#FFF', // White (dark mode)
   '--cor-principal': '#FF8E2B', // Main color (dark mode)
   '--cor-secundaria': '#0D2137', // Background color (dark mode)
   '--cor-terciaria': '#E0EAF5', // Text color (dark mode)
-  '--cor-quaternaria': '#E0EAF5', // Black (dark mode)
-  '--preto': '#FFF', // White (dark mode)
+  '--cor-quaternaria': '#183C57', // Black (dark mode)
+  '--cor-quintenaria': '#183C57',
+  '--preto': '#E0EAF5', // White (dark mode)
 };
 
 checkbox.addEventListener('change', () => {

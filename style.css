@@ -6,6 +6,7 @@
     --cor-secundaria: #F3F5FC;
     --cor-terciaria: #495057;
     --cor-quaternaria: #FFF;
+    --cor-quintenaria: #D8DFE8;
     --preto: #000;
 }
 
@@ -182,7 +183,7 @@
 
 .container-botao__descriptografar {
     color: var(--cor-principal);
-    background-color: var(--cor-quaternaria);
+    background-color: var(--cor-quintenaria);
 }
 
 .container-resultado__saida__vazio {
@@ -200,6 +201,10 @@
     display: none;
 }
 
+.resultao-area_vazio {
+    color: var(--preto);
+}
+
 .container-resultado__saida__criptografado {
     width: 100%;
 }
@@ -212,6 +217,11 @@
     font-size: 2em;
     font-weight: 400;
     font-family: var(--fonte-principal);
+    background: var(--cor-quaternaria);
+}
+
+.container-resultado__saida:focus {
+    background: var(--cor-quaternaria);
 }
 
 .container-botao__copiar {
