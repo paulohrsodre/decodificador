@@ -31,7 +31,13 @@ botaoCopiar.addEventListener("click", () => {
 
 function encriptar(stringEncriptada) {
     let matrizCriptografica = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringEncriptada = stringEncriptada.toLowerCase();
+    stringEncriptada = stringEncriptada;
+
+    if (/[A-Z]/.test(stringEncriptada)) {
+        alert("Ops! Digite apenas letras minúsculas para criptografar.");
+        document.getElementById("resultado").innerHTML = "Erro: Digite apenas letras minúsculas.";
+        return;
+    }
 
     for(let i=0; i < matrizCriptografica.length; i++) {
         if(stringEncriptada.includes(matrizCriptografica[i][0])) {
@@ -46,6 +52,12 @@ function desencriptar(stringDesencriptada) {
     let matrizCriptografica = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     stringDesencriptada = stringDesencriptada.toLowerCase();
 
+    if (/[A-Z]/.test(stringDesencriptada)) {
+        alert("Ops! Digite apenas letras minúsculas para descriptografar.");
+        document.getElementById("resultado").innerHTML = "Erro: Digite apenas letras minúsculas.";
+        return;
+    }
+
     for(let i=0; i < matrizCriptografica.length; i++) {
         if(stringDesencriptada.includes(matrizCriptografica[i][0])) {
             stringDesencriptada = stringDesencriptada.replaceAll(matrizCriptografica[i][1], matrizCriptografica[i][0]);
@@ -54,3 +66,31 @@ function desencriptar(stringDesencriptada) {
 
     return stringDesencriptada;
 }
+
+// Versão com conversão automática de texto para minúsculas
+
+// function encriptar(stringEncriptada) {
+//     let matrizCriptografica = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+//     stringEncriptada = stringEncriptada.toLowerCase();
+
+//     for(let i=0; i < matrizCriptografica.length; i++) {
+//         if(stringEncriptada.includes(matrizCriptografica[i][0])) {
+//             stringEncriptada = stringEncriptada.replaceAll(matrizCriptografica[i][0], matrizCriptografica[i][1]);
+//         }
+//     }
+
+//     return stringEncriptada;
+// }
+
+// function desencriptar(stringDesencriptada) {
+//     let matrizCriptografica = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+//     stringDesencriptada = stringDesencriptada.toLowerCase();
+
+//     for(let i=0; i < matrizCriptografica.length; i++) {
+//         if(stringDesencriptada.includes(matrizCriptografica[i][0])) {
+//             stringDesencriptada = stringDesencriptada.replaceAll(matrizCriptografica[i][1], matrizCriptografica[i][0]);
+//         }
+//     }
+
+//     return stringDesencriptada;
+// }

@@ -9,15 +9,26 @@
 <body class="principal">
       
     <main class="container">
-        <header class="cabecalho">
-            <img src="./assets/Logo.svg" alt="Logo da Alura">
-        </header>
+        <div class="container__cabecalho">
+            <header class="cabecalho">
+                <img src="./assets/Logo.svg" alt="Logo da Alura" id="logo">
+            </header>
+            <div class="container-tema">
+                <label for="tema-escuro" class="container-tema__label">
+                    <input type="checkbox" id="tema-escuro" class="container-tema__check">
+                    <ion-icon name="sunny" class="sunny"></ion-icon> 
+                    <ion-icon name="moon" class="moon"></ion-icon>
+                    <span class="toggle"></span>
+                </label>
+            </div>            
+        </div>
 
         <section class="container__entrada">
+              
             <textarea type="textarea" class="container-entrada__texto" placeholder="Digite seu texto"></textarea>
 
             <p class="container-entrada__alerta">
-                <img src="./assets/info.svg" alt="Icone de alerta">
+                <img src="./assets/info.svg" alt="Icone de alerta" class="icone__alerta">
                 Apenas letras minúsculas e sem acento.
             </p>
             
@@ -44,5 +55,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
