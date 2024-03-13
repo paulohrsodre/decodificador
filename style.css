@@ -10,6 +10,7 @@
     --preto: #000;
     --hover-azul: #105ab5;
     --hover-cinza: #F3F5FC;
+    --disabled: #b2c1d1;
 }
 
 * {
@@ -192,6 +193,14 @@
     transform: scale(0.95);
 }
 
+.container-botao__criptografar:disabled,
+.container-botao__descriptografar:disabled {
+  transform: none;
+  background-color: var(--disabled);
+  cursor: default;
+  pointer-events: none;
+}
+
 .container-botao__descriptografar {
     color: var(--cor-principal);
     background-color: var(--cor-quintenaria);
@@ -310,7 +319,7 @@
     }
 
     .container-resultado__saida__vazio {
-        height: 88vh;
+        height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;

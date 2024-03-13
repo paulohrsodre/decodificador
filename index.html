@@ -11,7 +11,9 @@
     <main class="container">
         <div class="container__cabecalho">
             <header class="cabecalho">
-                <img src="./assets/Logo.svg" alt="Logo da Alura" id="logo">
+                <a href="index.html">
+                    <img src="./assets/Logo.svg" alt="Logo da Alura" id="logo">
+                </a>
             </header>
             <div class="container-tema">
                 <label for="tema-escuro" class="container-tema__label">
@@ -33,8 +35,8 @@
             </p>
             
             <div class="container-botoes">
-                <button onclick="botaoEncriptar()" class="container-botao__criptografar">Criptografar</button>
-                <button onclick="botaoDesencriptar()" class="container-botao__descriptografar">Descriptografar</button>
+                <button onclick="botaoEncriptar()" class="container-botao__criptografar" disabled>Criptografar</button>
+                <button onclick="botaoDesencriptar()" class="container-botao__descriptografar" disabled>Descriptografar</button>
             </div>
         </section>
 

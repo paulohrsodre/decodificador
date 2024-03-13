@@ -23,6 +23,7 @@ const lightMode = {
   '--preto': '#000', // Black (light mode)
   '--hover-azul': '#105ab5',
   '--hover-cinza': '#F3F5FC',
+  '--disabled': '#b2c1d1'
 };
 
 const darkMode = {
@@ -33,15 +34,23 @@ const darkMode = {
   '--cor-quintenaria': '#183C57',
   '--preto': '#E0EAF5', // White (dark mode)
   '--hover-azul': '#ffb97d',
-  '--hover-cinza': '#2E77AE',
+  '--hover-cinza': '#F3F5FC',
+  '--disabled': '#5b6875'
 };
+
+function checkSystemTheme() {
+  const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return prefersDarkTheme ? darkMode : lightMode;
+}
+
+const currentTheme = checkSystemTheme();
 
 checkbox.addEventListener('change', () => {
   const currentTheme = checkbox.checked ? darkMode : lightMode;
   for (const [key, value] of Object.entries(currentTheme)) {
     root.style.setProperty(key, value);
   }
-  body.classList.toggle('tema-escuro');
+  body.classList.toggle('tema-escuro', currentTheme === darkMode);
   logo.src = currentTheme === darkMode ? darkLogo : lightLogo;
   info.src = currentTheme === darkMode ? darkInfo : lightInfo;
   imagem.src = currentTheme === darkMode ? darkImagem : lightImagem;

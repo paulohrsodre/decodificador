@@ -2,6 +2,26 @@ const entradaTexto = document.querySelector(".container-entrada__texto");
 const resultado = document.querySelector(".container-resultado__saida");
 const botaoCopiar = document.querySelector(".container-botao__copiar");
 
+const textoEntrada = document.querySelector(".container-entrada__texto");
+
+textoEntrada.addEventListener("input", function() {
+  habilitarBotoes();
+});
+
+
+function habilitarBotoes() {
+    const botaoCriptografar = document.querySelector(".container-botao__criptografar");
+    const botaoDescriptografar = document.querySelector(".container-botao__descriptografar");
+
+    if (textoEntrada.value.length > 0) {
+      botaoCriptografar.disabled = false;
+      botaoDescriptografar.disabled = false;
+    } else {
+      botaoCriptografar.disabled = true;
+      botaoDescriptografar.disabled = true;
+    }
+}
+
 function botaoEncriptar() {
     document.getElementById("resultado_imagem").style.display = "none";
     document.getElementById("resultado_titulo").style.display = "none";
@@ -23,6 +43,8 @@ botaoCopiar.addEventListener("click", () => {
     navigator.clipboard.writeText(resultado.value)
     .then(() => {
         console.log("Texto copiado!");
+        resultado.innerHTML = "Texto copiado!";
+        botaoCopiar.style.display = "none";
     })
     .catch(err => {
         console.error("Erro ao copiar texto: ", err);
@@ -35,7 +57,6 @@ function encriptar(stringEncriptada) {
 
     if (/[A-Z]/.test(stringEncriptada)) {
         alert("Ops! Digite apenas letras minúsculas para criptografar.");
-        document.getElementById("resultado").innerHTML = "Erro: Digite apenas letras minúsculas.";
         return;
     }
 
@@ -54,7 +75,6 @@ function desencriptar(stringDesencriptada) {
 
     if (/[A-Z]/.test(stringDesencriptada)) {
         alert("Ops! Digite apenas letras minúsculas para descriptografar.");
-        document.getElementById("resultado").innerHTML = "Erro: Digite apenas letras minúsculas.";
         return;
     }
 
