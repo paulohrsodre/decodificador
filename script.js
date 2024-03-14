@@ -28,12 +28,19 @@ function botaoEncriptar() {
     document.getElementById("resultado_texto").style.display = "none";
     document.getElementById("resultado").style.display = "block";
     document.getElementById("copiar").style.display = "block";
+
     const textoEncriptado = encriptar(entradaTexto.value);
     resultado.value = textoEncriptado;
     entradaTexto.value = "";
 }
 
 function botaoDesencriptar() {
+    document.getElementById("resultado_imagem").style.display = "none";
+    document.getElementById("resultado_titulo").style.display = "none";
+    document.getElementById("resultado_texto").style.display = "none";
+    document.getElementById("resultado").style.display = "block";
+    document.getElementById("copiar").style.display = "block";
+    
     const textoDesencriptado = desencriptar(entradaTexto.value);
     resultado.value = textoDesencriptado;
     entradaTexto.value = "";
